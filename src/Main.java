@@ -16,7 +16,6 @@ public class Main {
         // print out Book
         System.out.println(heartsInAtlantis);
         System.out.println(generationP);
-
         // equals and hashCode
         Author steveKing = new Author("Steve", "King");
         System.out.println(stephenKing.equals(steveKing)); // false
