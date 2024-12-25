@@ -1,33 +1,59 @@
 public class Main {
 
     public static void main(String[] args) {
-        Author stephenKing = new Author("Stephen", "King");
-        Author viktorPelevin = new Author("Viktor", "Pelevin");
 
-        Book heartsInAtlantis = new Book("Hearts In Atlantis", stephenKing, 1997);
-        Book generationP = new Book("Generation «П»", viktorPelevin, 1998);
+        System.out.println("Домашняя работа № 12");
 
-        generationP.setIssueYear(1999);
+        System.out.println("Задание № 1");
 
-        // print out Author
-        System.out.println(stephenKing); // Автор{имя='Stephen', фамилия='King'}
-        System.out.println(viktorPelevin); // Автор{имя='Viktor', фамилия='Pelevin'}
+        System.out.println(" ");
 
-        // print out Book
-        System.out.println(heartsInAtlantis);
-        System.out.println(generationP);
-        // equals and hashCode
-        Author steveKing = new Author("Steve", "King");
-        System.out.println(stephenKing.equals(steveKing)); // false
+        Book book = new Book("Война и мир ", "Л.Н. Толстой ", 1863);
+        System.out.println("book.name = " + book.getName());
+        System.out.println("book.author = " + book.getAuthor());
+        System.out.println("book.yearOfPublication = " + book.getYearOfPublication());
 
-        Author stevenKing = new Author("Stephen", "King");
-        System.out.println(stephenKing.equals(stevenKing)); // true
+        System.out.println(" ");
 
-        Book heartsInAtlantis2 = new Book("Hearts In Atlantis", stevenKing, 2005);
-        System.out.println(heartsInAtlantis2.equals(heartsInAtlantis)); // true
+        Book book2 = new Book("Гранатовый браслет", "А. И. Куприн", 1911);
+        System.out.println("book2.name = " + book2.getName());
+        System.out.println("book2.author = " + book2.getAuthor());
+        System.out.println("book2.yearOfPublication = " + book2.getYearOfPublication());
 
-        Book heartsInAtlantis3 = new Book("Hearts In Atlantis", viktorPelevin, 1997);
-        System.out.println(heartsInAtlantis3.equals(heartsInAtlantis)); // false
-        System.out.println(generationP.equals(heartsInAtlantis3)); // false
+        System.out.println(" ");
+
+        Book book3 = new Book("Преступление и наказание", "Ф.М. Достоевский ", 1867);
+        System.out.println("book3.name = " + book3.getName());
+        System.out.println("book3.author = " + book3.getAuthor());
+        System.out.println("book3.yearOfPublication = " + book3.getYearOfPublication());
+
+        System.out.println(" ");
+
+        System.out.println("Изменяем год публикации с помощью сеттера");
+        book.setYearOfPublication(1864);
+        System.out.println("book.getYearOfPublication() = " + book.getYearOfPublication());
+
+        System.out.println(" ");
+
+        System.out.println("Задание № 2");
+
+        System.out.println(" ");
+
+        Author author = new Author(" Лев", "  Толстой ");
+        System.out.println("author.name = " + author.getName());
+        System.out.println("author.surname = " + author.getSurname());
+
+        System.out.println(" ");
+
+        Author author2 = new Author("  Александр ", "Куприн ");
+        System.out.println("author2.name = " + author2.getName());
+        System.out.println("author2.surname = " + author2.getSurname());
+
+        System.out.println(" ");
+
+        Author author3 = new Author("Федор", "Достоевский");
+        System.out.println("author3.name = " + author3.getName());
+        System.out.println("author3.surname = " + author3.getSurname());
+
     }
 }
